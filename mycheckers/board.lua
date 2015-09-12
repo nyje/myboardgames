@@ -1,21 +1,21 @@
 
-minetest.register_node("mycheckers:board", {
-	description = "Checker Board",
-	inventory_image = "mycheckers_board_inven.png",
-	wield_image = "mycheckers_board_inven.png",
-	light_source = 5,
-	tiles = {"mycheckers_border_cbl.png","mycheckers_border.png","mycheckers_border_side.png","mycheckers_border_side.png","mycheckers_border_side.png","mycheckers_border_side.png"},
-	drawtype = "normal",
-	paramtype = "light",
-	groups = {cracky = 1},
-	sounds = default.node_sound_stone_defaults(),
+--minetest.register_node("mycheckers:board", {
+--	description = "Checker Board",
+--	inventory_image = "mycheckers_board_inven.png",
+--	wield_image = "mycheckers_board_inven.png",
+--	light_source = 5,
+--	tiles = {"mycheckers_border_cbl.png","mycheckers_border.png","mycheckers_border_side.png","mycheckers_border_side.png","mycheckers_border_side.png","mycheckers_border_side.png"},
+--	drawtype = "normal",
+--	paramtype = "light",
+--	groups = {cracky = 1},
+--	sounds = default.node_sound_stone_defaults(),
 
-on_rightclick = function(pos, node, player, itemstack, pointed_thing)
-local schem = minetest.get_modpath("mycheckers").."/schems/mycheckersboard.mts"
+--on_rightclick = function(pos, node, player, itemstack, pointed_thing)
+--local schem = minetest.get_modpath("mycheckers").."/schems/mycheckersboard.mts"
 	minetest.place_schematic({x=pos.x,y=pos.y,z=pos.z},schem,0, "air", true)
-end,
+--end,
 
-})
+--})
 
 local board = {
 	{"mycheckers:border"    ,{"mycheckers_border.png"}},
